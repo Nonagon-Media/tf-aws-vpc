@@ -1,7 +1,3 @@
-provider "aws" {
-	region = "${var.aws_region}"
-}
-
 # An S3 bucket to hold the state file
 resource "aws_s3_bucket" "myn9ntfstatebucket" {
   bucket = "n9n.tfstate"
@@ -53,10 +49,3 @@ terraform {
     dynamodb_table  = "n9n.tfstate"
   }
 }
-#resource "aws_instance" "web" {
-#	ami = "${var.default_ami}"
-#	instance_type = "t1.micro"
-#	tags = {
-#		Name = "N9N Test Instance"
-#	}
-#}
