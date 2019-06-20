@@ -9,7 +9,7 @@ variable "aws_region" {
 
 variable "default_ami" {
   description = "Ubuntu 18.04 SSD"
-  default = "ami_0db180c518750ee4f"
+  default = "ami-005bdb005fb00e791"
 }
 
 variable "key_path" {

@@ -1,3 +1,7 @@
+##################
+### S3 BUCKETS ###
+##################
+
 # An S3 bucket to hold the state file
 resource "aws_s3_bucket" "myn9ntfstatebucket" {
   bucket = "n9n.tfstate"
