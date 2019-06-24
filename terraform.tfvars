@@ -1,6 +1,6 @@
 ### GLOBALS ###
 aws_region = "us-west-2"
-default_ami = "ami_0db180c518750ee4f"
+default_ami = "ami-0db180c518750ee4f"
 
 ### VPC ###
 n9n_cidr = "192.168.0.0/16"
