@@ -13,11 +13,19 @@ resource "aws_route_table" "operations_public_rt" {
 		cidr_block = "0.0.0.0/0"
 		gateway_id = "${aws_internet_gateway.n9nigw.id}"
 		}
+
+	tags = {
+		Name = "N9N Ops Public"
+	}
 	}
 
 # Operations Private
 resource "aws_route_table" "operations_private_rt" {
 	vpc_id = "${aws_vpc.n9n.id}"
+
+	tags = {
+		Name = "N9N Ops Private"
+	}
 	}
 
 # Applications Public
@@ -28,11 +36,19 @@ resource "aws_route_table" "applications_public_rt" {
 		cidr_block = "0.0.0.0/0"
 		gateway_id = "${aws_internet_gateway.n9nigw.id}"
 		}
+
+	tags = {
+		Name = "N9N Apps Public"
+	}
 	}
 
 # Applications Private
 resource "aws_route_table" "applications_private_rt" {
 	vpc_id = "${aws_vpc.n9n.id}"
+
+	tags = {
+		Name = "N9N Apps Private"
+	}
 }
 
 # Development Public
@@ -43,11 +59,19 @@ resource "aws_route_table" "development_public_rt" {
 		cidr_block = "0.0.0.0/0"
 		gateway_id = "${aws_internet_gateway.n9nigw.id}"
 		}
+
+	tags = {
+		Name = "N9N Dev Public"
+	}
 	}
 
 # Development Private
 resource "aws_route_table" "development_private_rt" {
 	vpc_id = "${aws_vpc.n9n.id}"
+
+	tags = {
+		Name = "N9N Dev Private"
+	}
 	}
 
 ##############
